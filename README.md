@@ -5,13 +5,7 @@ A personal portfolio website built with **Next.js**, **TypeScript** and **Tailwi
 
 The website includes a homepage, projects page, insights/blog-style page, contact page and a Git-based CMS admin panel for writing and managing insight posts.
 
----
 
-## Live Website
-
-Coming soon after deployment.
-
----
 
 ## About
 
