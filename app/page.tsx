@@ -240,7 +240,7 @@ export default function Home() {
 
               <div className="space-y-8">
                 <p className="text-lg leading-relaxed text-slate-700">
-                  I am a final-year Computer Science student at Nottingham Trent University, focused on backend engineering, AI systems, robotics simulation and cloud-backed services. I like projects where I can design the architecture, build the system and explain the technical decisions clearly.
+                   I am a recent Computer Science graduate at Nottingham Trent University, focused on backend engineering, AI systems, robotics simulation and cloud-backed services. I like projects where I can design the architecture, build the system and explain the technical decisions clearly.
                 </p>
 
                 {showStory && (
@@ -274,7 +274,7 @@ export default function Home() {
       <section className="relative py-20 lg:py-28">
         <div className="mx-auto max-w-7xl px-6">
           <div className="mb-16 space-y-4">
-            <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-500">Professional & Academic</p>
+            <p className="text-xs font-bold uppercase tracking-[0.3em] text-slate-500">Professional</p>
             <h2 className="text-4xl sm:text-5xl font-black">Timeline</h2>
             <p className="max-w-2xl text-lg text-slate-600">
               Practical experience across software engineering, teaching, communication and customer-facing environments.
