@@ -1,36 +1,225 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+````md
+# Yash Kumar Portfolio
+
+A personal portfolio website built with **Next.js**, **TypeScript** and **Tailwind CSS** to showcase my software engineering projects, AI/robotics work, cloud-based systems and personal insights.
+
+The website includes a homepage, projects page, insights/blog-style page, contact page and a Git-based CMS admin panel for writing and managing insight posts.
+
+---
+
+## Live Website
+
+Coming soon after deployment.
+
+---
+
+## About
+
+This portfolio is designed to present my technical journey as a Computer Science student and software engineer. It focuses on practical engineering work, including backend systems, AI applications, robotics simulation, cloud services and personal reflections from industry conversations.
+
+Main sections:
+
+- **Home** — overview of my technical focus and background.
+- **Projects** — selected engineering projects with outcomes, technical details and GitHub links.
+- **Insights** — personal posts about interviews, technology thoughts, career reflections and future business ideas.
+- **Contact** — simple contact page with email and phone details.
+- **Admin CMS** — local CMS panel for creating and editing insight posts without manually writing code.
+
+---
+
+## Tech Stack
+
+- **Next.js**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Decap CMS**
+- **Markdown content**
+- **Gray Matter**
+- **GitHub**
+
+---
+
+## Key Features
+
+- Responsive personal portfolio design
+- Clean navigation with active page styling
+- Project showcase cards
+- Insight posts managed through Markdown
+- Read More pages for full insight content
+- Search and category filtering for insights
+- Contact page with direct email access
+- Local admin panel for creating posts through a CMS interface
+- Image upload support for insight thumbnails
+
+---
+
+## Project Structure
+
+```txt
+yash-kumar-portfolio/
+├── app/
+│   ├── contact/
+│   ├── insights/
+│   │   ├── [slug]/
+│   │   │   └── page.tsx
+│   │   └── page.tsx
+│   ├── projects/
+│   │   └── page.tsx
+│   ├── AboutStory.tsx
+│   ├── NavBar.tsx
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── content/
+│   └── insights/
+│
+├── lib/
+│   └── insights.ts
+│
+├── public/
+│   ├── admin/
+│   │   ├── config.yml
+│   │   └── index.html
+│   ├── projects/
+│   ├── uploads/
+│   │   └── insights/
+│   └── yash-profile.jpg
+│
+├── package.json
+└── README.md
+````
+
+---
 
 ## Getting Started
 
-First, run the development server:
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open the website locally:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```txt
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open the CMS admin panel locally:
 
-## Learn More
+```txt
+http://localhost:3000/admin/index.html
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run Decap CMS local backend:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npx decap-server
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+The local backend allows the CMS to create and edit Markdown files inside the project.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Adding New Insight Posts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Insight posts are stored as Markdown files inside:
+
+```txt
+content/insights/
+```
+
+Each post includes frontmatter such as:
+
+```yaml
+---
+title: "Post Title"
+slug: "post-title"
+category: "Interviews"
+postType: "Reflection"
+date: "2026-05-31"
+thumbnail: "/uploads/insights/example.png"
+preview: "Short preview text for the card."
+takeaway: "Main thought or reflection."
+tags:
+  - Career
+  - Interview
+  - Technology
+keywords:
+  - AI
+  - Software Engineering
+  - Career
+ctaLabel: "LinkedIn"
+ctaUrl: "https://www.linkedin.com/"
+featured: false
+published: true
+---
+```
+
+The full post content is written below the frontmatter in Markdown.
+
+---
+
+## Current Insight Categories
+
+* Interviews
+* Tech Thoughts
+* Business Ideas
+* Career Journey
+* Future Plans
+* Learning Notes
+
+---
+
+## Deployment
+
+This project can be deployed using **Vercel**.
+
+Basic deployment steps:
+
+1. Push the project to GitHub.
+2. Import the GitHub repository into Vercel.
+3. Deploy using the default Next.js settings.
+4. Add any required environment variables if needed later.
+
+---
+
+## GitHub Repository
+
+```txt
+https://github.com/yashN1246826/yash-kumar-portfolio
+```
+
+---
+
+## Author
+
+**Yash Kumar**
+BSc Computer Science
+Software Engineering | AI | Robotics | Cloud
+
+GitHub: [yashN1246826](https://github.com/yashN1246826)
+
+---
+
+## Status
+
+This portfolio is actively being improved with new projects, insights, UI refinements and content updates.
+
+````
+
+Then run:
+
+```bash
+git add README.md
+git commit -m "Add README"
+git push
+````
