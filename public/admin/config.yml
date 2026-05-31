@@ -1,0 +1,121 @@
+local_backend: true
+
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads/insights"
+public_folder: "/uploads/insights"
+
+collections:
+  - name: "insights"
+    label: "Insights"
+    label_singular: "Insight Post"
+    folder: "content/insights"
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}} — {{category}}"
+    fields:
+      - label: "Post Title"
+        name: "title"
+        widget: "string"
+        hint: "Example: The Student Auditor | Career and Industry Insights"
+
+      - label: "URL Slug"
+        name: "slug"
+        widget: "string"
+        hint: "Use lowercase words with hyphens, for example: student-auditor-career-insights"
+
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Interviews"
+          - "Tech Thoughts"
+          - "Business Ideas"
+          - "Career Journey"
+          - "Future Plans"
+          - "Learning Notes"
+
+      - label: "Post Type"
+        name: "postType"
+        widget: "select"
+        options:
+          - "Interview Preview"
+          - "Reflection"
+          - "Opinion"
+          - "Business Thought"
+          - "Learning Note"
+          - "Future Plan"
+
+      - label: "Publish Date"
+        name: "date"
+        widget: "datetime"
+
+      - label: "Thumbnail Image"
+        name: "thumbnail"
+        widget: "image"
+        required: false
+        hint: "Upload an interview screenshot, event photo, LinkedIn post image, or project-related visual."
+
+      - label: "Short Preview"
+        name: "preview"
+        widget: "text"
+        hint: "This appears on the Insights page card. Keep it short and clear."
+
+      - label: "What We Discussed"
+        name: "discussion"
+        widget: "text"
+        required: false
+        hint: "Useful for interview posts. Briefly explain the conversation or topic."
+
+      - label: "What I Learned / What I Think"
+        name: "takeaway"
+        widget: "text"
+        required: false
+        hint: "This is the personal reflection part. What did you take from it?"
+
+      - label: "Future Thought / Business Angle"
+        name: "futureThought"
+        widget: "text"
+        required: false
+        hint: "Optional. Add your view on where this technology, business, or idea could go."
+
+      - label: "Tags"
+        name: "tags"
+        widget: "list"
+        required: false
+        hint: "Example: Career, Interview, AI, Computer Vision"
+
+      - label: "Search Keywords"
+        name: "keywords"
+        widget: "list"
+        required: false
+        hint: "Extra searchable words for your website search later."
+
+      - label: "CTA Button Label"
+        name: "ctaLabel"
+        widget: "string"
+        required: false
+        default: "View LinkedIn Post"
+
+      - label: "CTA Button URL"
+        name: "ctaUrl"
+        widget: "string"
+        required: false
+        hint: "Add the LinkedIn post, YouTube video, article, or external link."
+
+      - label: "Featured Post"
+        name: "featured"
+        widget: "boolean"
+        default: false
+
+      - label: "Published"
+        name: "published"
+        widget: "boolean"
+        default: true
+
+      - label: "Full Reflection"
+        name: "body"
+        widget: "markdown"
+        hint: "Write the full post here. This can later be used for a full post page."
