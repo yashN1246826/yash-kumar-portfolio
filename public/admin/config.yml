@@ -1,8 +1,9 @@
-local_backend: true
-
 backend:
-  name: git-gateway
+  name: github
+  repo: yashN1246826/yash-kumar-portfolio
   branch: main
+  base_url: https://yashkumar.co.uk
+  auth_endpoint: api/auth
 
 media_folder: "public/uploads/insights"
 public_folder: "/uploads/insights"
